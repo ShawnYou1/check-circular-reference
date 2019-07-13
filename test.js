@@ -1,24 +1,24 @@
 let check = require('./index');
 
-let obj = {
+// circular reference
+let caseObj1 = {
     a: 1,
-    b: 2,
-    c: {
-        c1: 1,
+    b: {
+        b1: 1,
     }
 };
-
-// circular reference
-obj.c.c2 = obj
-obj.c.c3 = obj.c
-obj.c.c4 = {
-    c41: obj
-};
-check(obj);
+caseObj1.b.b2 = caseObj1;
+caseObj1.c = caseObj1.b;
+test('caseObj1', () => {
+    expect(check(caseObj1)).toBe('.b.b2-.c');
+});
 
 // This is not circular reference
-let obj2 = {
-    a: obj,
-    b: obj,
+let person = {name: 'Shawn You'}
+let caseObj2 = {
+    a: person,
+    b: person,
 }
-check(obj2);
+test('caseObj2', () => {
+    expect(check(caseObj2)).toBe('');
+});

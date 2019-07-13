@@ -4,7 +4,7 @@
   "description": "Check an object whether exist circular reference and print this attribute",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
