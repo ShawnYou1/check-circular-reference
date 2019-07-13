@@ -36,3 +36,6 @@ menu[0].children[0].parent = menu[0];
 check(menu);
 ```
 ![circular reference example screenshot](https://github.com/ShawnYou1/check-circular-reference/blob/master/example.png)
+
+## Others
+[Understanding The Error ‘Converting circular structure to JSON’](https://youshaohua.com/post/understanding-the-error-converting-circular-structure-to-json)
