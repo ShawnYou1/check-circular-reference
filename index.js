@@ -1,18 +1,28 @@
 
 
 function recursiveObj(obj, chain, reference, result) {
-    if (typeof obj === 'object') {
-        reference.push(obj);
-        for (let pro in obj) {
-            if (reference.includes(obj[pro])) {
+
+    if (Array.isArray(obj)) {
+        obj.forEach((item, index) => {
+            chain += '.' + index;
+            check(item);
+        });
+    } else if (typeof obj === 'object') {
+        check(obj);
+    }
+
+    function check(_obj) {
+        reference.push(_obj);
+        for (let pro in _obj) {
+            if (reference.includes(_obj[pro])) {
                 // maybe exist circular reference
                 try{
-                    JSON.stringify(obj[pro]);
+                    JSON.stringify(_obj[pro]);
                 } catch(error) {
                     result.push(chain + '.' + pro);
                 };
             } else {
-                recursiveObj(obj[pro], chain + '.' + pro, reference, result);
+                recursiveObj(_obj[pro], chain + '.' + pro, reference, result);
             }
         }
     }

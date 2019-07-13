@@ -22,3 +22,22 @@ let caseObj2 = {
 test('caseObj2', () => {
     expect(check(caseObj2)).toBe('');
 });
+
+// This for test array
+let menu = [
+    {
+        label: 'Home',
+        children: [
+            {
+                label: 'Product'
+            }
+        ],
+    },
+    {
+        label: 'About'
+    }
+];
+menu[0].children[0].parent = menu[0];
+test('Array test', () => {
+    expect(check(menu)).toBe('.0.children.0.parent');
+});
