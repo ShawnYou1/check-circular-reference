@@ -1,5 +1,5 @@
 # Check Circular Reference
-A tool that check an object whether exist circular reference and print this attribute.
+A tool that check an object whether exist circular reference and print this attribute chain.
 
 
 ## Installation
@@ -9,8 +9,30 @@ npm install check-circular-reference
 
 ## Usage
 ```
+let check = require('./index');
+
 // The object that you will check
 let obj = {} 
-let check = require('./index');
 check(obj)
 ```
+
+## Example
+```
+let check = require('./index');
+let menu = [
+    {
+        label: 'Home',
+        children: [
+            {
+                label: 'Product'
+            }
+        ],
+    },
+    {
+        label: 'About'
+    }
+];
+menu[0].children[0].parent = menu[0];
+check(menu);
+```
+![circular reference example screenshot](https://github.com/ShawnYou1/check-circular-reference/blob/master/example.png)
