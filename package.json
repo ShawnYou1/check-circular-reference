@@ -15,7 +15,7 @@
     "reference",
     "check"
   ],
-  "author": "Shawn You",
+  "author": "Shawn You <youshaohua.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ShawnYou1/check-circular-reference/issues"
