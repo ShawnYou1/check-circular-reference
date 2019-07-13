@@ -8,7 +8,7 @@ let obj = {
     }
 };
 
-// circlar reference
+// circular reference
 obj.c.c2 = obj
 obj.c.c3 = obj.c
 obj.c.c4 = {
@@ -16,7 +16,7 @@ obj.c.c4 = {
 };
 check(obj);
 
-// This is not circlar reference
+// This is not circular reference
 let obj2 = {
     a: obj,
     b: obj,

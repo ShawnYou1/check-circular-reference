@@ -6,7 +6,7 @@ function recursiveObj(obj, chain = '') {
         reference.push(obj);
         for (let pro in obj) {
             if (reference.includes(obj[pro])) {
-                console.log('Maybe exist circlar reference', chain + '.' + pro);
+                console.log('Maybe exist circular reference', chain + '.' + pro);
             } else {
                 recursiveObj(obj[pro], chain + '.' + pro);
             }
