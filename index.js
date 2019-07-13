@@ -22,6 +22,8 @@ module.exports =  function (obj) {
     let result = [];
     let reference = [];
     recursiveObj(obj, '', reference, result);
-    console.log(result);
+    result.forEach((item) => {
+        console.error('attribute chain has circular reference', item);
+    });
     return result.join('-');
 }
