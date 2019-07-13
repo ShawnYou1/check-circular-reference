@@ -1,6 +1,6 @@
 {
   "name": "check-circular-reference",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Check an object whether exist circular reference and print this attribute",
   "main": "index.js",
   "scripts": {
