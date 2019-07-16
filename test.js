@@ -43,3 +43,17 @@ menu[1].extend.home = menu[0].children[0];
 test('Array test', () => {
     expect(check(menu)).toBe('[0].children[0].parent-[1].extend.home');
 });
+
+// object -> array
+let family = {
+    name: 'Shawn You',
+    child: [
+        {
+            name: 'No',
+        }
+    ]
+}
+family.child[0].parent = family;
+test('Object contains array', () => {
+    expect(check(family)).toBe('.child[0].parent');
+});
