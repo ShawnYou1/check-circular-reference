@@ -41,5 +41,5 @@ let menu = [
 menu[0].children[0].parent = menu[0];
 menu[1].extend.home = menu[0].children[0];
 test('Array test', () => {
-    expect(check(menu)).toBe('.0.children.0.parent-.1.extend.home');
+    expect(check(menu)).toBe('[0].children[0].parent-[1].extend.home');
 });
