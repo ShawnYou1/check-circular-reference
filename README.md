@@ -29,10 +29,12 @@ let menu = [
         ],
     },
     {
-        label: 'About'
+        label: 'About',
+        extend: {}
     }
 ];
 menu[0].children[0].parent = menu[0];
+menu[1].extend.home = menu[0].children[0];
 check(menu);
 ```
 ![circular reference example screenshot](https://youshaohua.com/assets/img/others/github-check-circular-reference-example.png)
