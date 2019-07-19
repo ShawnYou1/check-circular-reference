@@ -10,7 +10,7 @@ let caseObj1 = {
 caseObj1.b.b2 = caseObj1;
 caseObj1.c = caseObj1.b;
 test('caseObj1', () => {
-    expect(check(caseObj1)).toBe('.b.b2-.c');
+    expect(check(caseObj1)).toStrictEqual(['.b.b2','.c']);
 });
 
 // This is not circular reference
@@ -20,7 +20,7 @@ let caseObj2 = {
     b: person,
 }
 test('caseObj2', () => {
-    expect(check(caseObj2)).toBe('');
+    expect(check(caseObj2)).toStrictEqual([]);
 });
 
 // This for test array
@@ -41,7 +41,7 @@ let menu = [
 menu[0].children[0].parent = menu[0];
 menu[1].extend.home = menu[0].children[0];
 test('Array test', () => {
-    expect(check(menu)).toBe('[0].children[0].parent-[1].extend.home');
+    expect(check(menu)).toStrictEqual(['[0].children[0].parent', '[1].extend.home']);
 });
 
 // object -> array
@@ -55,5 +55,5 @@ let family = {
 }
 family.child[0].parent = family;
 test('Object contains array', () => {
-    expect(check(family)).toBe('.child[0].parent');
+    expect(check(family)).toStrictEqual(['.child[0].parent']);
 });

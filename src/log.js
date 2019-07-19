@@ -9,14 +9,11 @@
 'use strict';
 
 
-module.exports = function(obj, result) {
+module.exports = function(result) {
     if (result.length > 0) {
         console.warn('Circular Reference');
         result.forEach((item) => {
-            let horizontalBars = item.split('.').map(() => {
-                return '-';
-            });
-            console.warn(`${horizontalBars.join('')}> ${item}`);
+            console.warn(item);
         });
     }
 }
