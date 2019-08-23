@@ -4,15 +4,22 @@ A tool that check an object whether exist circular reference and print its attri
 
 ## Installation
 ```
-npm install check-circular-reference
+npm install check-circular-reference --save
 ```
 
 ## Usage
+### Node
 ```
 let check = require('check-circular-reference');
 
-// The object that you will check
-let obj = {} 
+// The obj that you will check
+check(obj)
+```
+### ES6
+```
+import check from 'check-circular-reference';
+
+// The obj that you will check
 check(obj)
 ```
 
