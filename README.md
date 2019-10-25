@@ -41,5 +41,14 @@ check(menu);
 ```
 ![circular reference example screenshot](https://youshaohua.com/assets/img/others/github-check-circular-reference-example.png)
 
-## Relative Links
+## Contribution
+```
+# install
+npm install
+
+# test
+npm run test
+```
+
+## About Circular Error
 [Understanding The Error ‘Converting circular structure to JSON’](https://youshaohua.com/post/understanding-the-error-converting-circular-structure-to-json)
