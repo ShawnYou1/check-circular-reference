@@ -1,5 +1,5 @@
 # Check Circular Reference &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ShawnYou1/check-circular-reference/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/check-circular-reference)
-A tool that checks an object whether it exists circular reference, or whether it is a mutable variable. Print its reference attribute chain.
+Check circular reference or mutable variable. Print its reference attribute chain.
 
 
 ## Installation
