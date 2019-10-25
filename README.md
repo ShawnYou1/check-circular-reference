@@ -1,5 +1,5 @@
 # Check Circular Reference &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ShawnYou1/check-circular-reference/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/check-circular-reference)
-A tool that check an object whether exist circular reference and print its attribute chain.
+A tool that checks an object whether it exists circular reference, or whether it is a mutable variable. Print its reference attribute chain.
 
 
 ## Installation
@@ -34,14 +34,9 @@ let menu = [
                 label: 'Product'
             }
         ],
-    },
-    {
-        label: 'About',
-        extend: {}
     }
 ];
 menu[0].children[0].parent = menu[0];
-menu[1].extend.home = menu[0].children[0];
 check(menu);
 ```
 ![circular reference example screenshot](https://youshaohua.com/assets/img/others/github-check-circular-reference-example.png)
