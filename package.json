@@ -1,6 +1,6 @@
 {
   "name": "check-circular-reference",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Check circular reference or mutable variable. Print its reference attribute chain.",
   "main": "index.js",
   "scripts": {
