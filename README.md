@@ -13,14 +13,24 @@ npm install check-circular-reference --save
 let check = require('check-circular-reference');
 
 // The obj that you will check
-check(obj)
+let checkResult = check(obj);
+if (checkResult.length === 0) {
+    // do not exist circular reference or mutable variable    
+} else {
+    // exist circular reference or mutable variable    
+}
 ```
 ### ES6
 ```
 import check from 'check-circular-reference';
 
 // The obj that you will check
-check(obj)
+let checkResult = check(obj);
+if (checkResult.length === 0) {
+    // do not exist circular reference or mutable variable    
+} else {
+    // exist circular reference or mutable variable    
+}
 ```
 
 ## Example
